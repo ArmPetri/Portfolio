@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  font-weight: normal;
+  margin: 0;
+  padding: 0; 
+}
+
+ul { 
+  list-style: none; 
+}
+
+img {
+  height: auto;
+  max-width: 100%; 
+}
+
+body {
+  width: 100vw;
+  height: 3200px;
+  background: linear-gradient(180deg, #35394C 0%, #354C49 72.92%), #354C49;
+  font-family: 'Lato', sans-serif;
+  color: #DDEDD9;
+  overflow-x: hidden;
+  /* background:
+  url(./background-image.png)     
+  center center/ auto 3200px              
+  no-repeat               
+  padding-box;              */
+}
+
+a {
+  color: #DDEDD9;
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 54px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 30px;
+  line-height: 43.95px;
+}
+
+h4 {
+  font-size: 18px
+}
+
+h5 {
+  font-size: 14px;
+}
+
+button {
+  font-family: 'Lato', sans-serif;
+  border: none;
+  color: #DDEDD9;
+}
+
+.container {
+  width: 1148px;
+  margin: auto;
+}
+
+/* Header */
+header {
+  padding: 42px 0;
+  height: 20vh;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header a:hover {
+  color: #469E63;
+  border-bottom: 1px solid #469E63
+}
+
+header li {
+  padding-left: 45px;
+}
+
+/* Hero  */
+.hero {
+  height:80vh;
+}
+
+.hero .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.left_hero {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.left_hero h1, h2 {
+  padding-bottom: 1rem;
+}
+
+.left_hero h3 {
+  padding-bottom: 3rem;
+}
+
+.left_hero button {
+  width: 179px;
+  height: 50px;
+  background: #469E63;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left_hero button:hover {
+  opacity: 0.8;
+}
+
+.left_hero button img {
+  padding-left: 1rem;
+}
+
+right_hero {
+  width: 50%;;
+  position: relative;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
