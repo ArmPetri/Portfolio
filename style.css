@@ -71,11 +71,6 @@ button {
   color: #DDEDD9;
 }
 
-/* .container {
-  width: 1148px;
-  margin: auto;
-} */
-
 /* Header */
 header {
   display: flex;
@@ -92,8 +87,6 @@ header .container {
 
 header .logo {
   filter: drop-shadow(0px 2px 2px 0px #35394C);
-  /* box-shadow: 0px 2px 2px 0px #35394C; */
- 
 }
 
 header nav {
@@ -125,7 +118,6 @@ header li {
   height: 100%;
   display: flex;
   align-items: center;
-  /* border: 1px solid red; */
 }
 
 .left_hero {
@@ -302,7 +294,6 @@ header li {
   height: 327px;
   width: 583px;
   border-radius: 3px;
-  /* position: relative; */
 }
 
 .img_overlay {
@@ -344,20 +335,15 @@ header li {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  /* padding-left: 30px; */
-  padding: 30px
-  /* align-items: center; */
+  padding: 30px;
 }
 
 .work_overlay {
   position: absolute;
-  /* left: -45%; */
   top: 20.5%;
   bottom: 0;
   left: 0;
   right: 0;
-  /* height: 327px;
-  width: 583px; */
   width: 414px;
   height: 180px;
   border-radius: 5px;
@@ -391,7 +377,6 @@ header li {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  /* border: 1px solid red; */
 }
 
 .work_link img {
@@ -408,9 +393,51 @@ header li {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  /* border: 1px solid red;; */
   height: 180px;
   width: 138px;
+}
+
+/* Skillset  */
+.skillset {
+  height: 500px;
+}
+
+.skillset h2 {
+  margin-top: 100px;;
+  padding-bottom: 70px;
+}
+
+.skillset_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.left_skillset, .right_skillset {
+  width: 50%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.left_skillset {
+  padding-right: 115px;
+  line-height: 29px;
+}
+
+.right_skillset {
+  display: flex;
+  justify-content: space-around;
+}
+
+.skillset_icons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 /* Media Queries  */
