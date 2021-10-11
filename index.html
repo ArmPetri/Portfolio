@@ -13,7 +13,7 @@
     <div class="container">
       <img src="./images/Logo.svg" alt="Logo" class="logo">
       <nav>
-        <ul>
+        <ul id="links" class="links">
           <li><a href="#header">Home</a></li>
           <li><a href="#work">Work</a></li>
           <li><a href="#skillset">Skills</a></li>
@@ -21,33 +21,37 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+      <button id="mobile_menu_button" class="mobile_menu_button"><img src="./icons/mobile_menu.svg" alt="mobile_menu" class="mobile_menu_icon"></button>
     </div>
   </Header>
+
   <!-- Hero -->
   <section id="hero" class="hero container">
-      <div class="left_hero">
-        <h1>Armands Petrikas</h1>
-        <h2>Front End Developer</h2>
-        <h3>Combining design and technology to create <br>
-          interactive web experiences</h3>
-        <a href="#work" class="btn_animation"><h4>See My Work</h4><img src="./icons/here.svg" alt="here"></a>
+    <div class="left_hero">
+      <h1>Armands Petrikas</h1>
+      <h2>Front End Developer</h2>
+      <h3>Combining design and technology to create <br>
+        interactive web experiences</h3>
+      <a href="#work" class="btn_animation"><h4>See My Work</h4><img src="./icons/here.svg" alt="here"></a>
+    </div>
+    <div class="right_hero">
+      <img src="./images/Large_Logo.svg" alt="" class="large_logo">
+      <div class="card">
+        <h4 class="card_data">Armands Petrikas</h4>
+        <h5 class="card_subtitle card_data">Front End Developer</h5>
+        <div class="card_line card_data"></div>
+        <h5 class="profiles card_data"><img src="./icons/email.svg" alt="email">armandspetrikas@gmail.com</h5>
+        <h5 class="profiles card_data"><img src="./icons/github.svg" alt="github">https://github.com/ArmPetri</h5>
+        <h5 class="profiles card_data"><img src="./icons/codepen.svg" alt="codepen">https://codepen.io/armpetri</h5>
+        <h5 class="profiles card_data"><img src="./icons/linkedin.svg" alt="linkedin">https://www.linkedin.com/in/armandspetrikas</h5>
       </div>
-      <div class="right_hero">
-        <img src="./images/Large_Logo.svg" alt="" class="large_logo">
-        <div class="card">
-          <h4 class="card_data">Armands Petrikas</h4>
-          <h5 class="card_subtitle card_data">Front End Developer</h5>
-          <div class="card_line card_data"></div>
-          <h5 class="profiles card_data"><img src="./icons/email.svg" alt="email">armandspetrikas@gmail.com</h5>
-          <h5 class="profiles card_data"><img src="./icons/github.svg" alt="github">https://github.com/ArmPetri</h5>
-          <h5 class="profiles card_data"><img src="./icons/codepen.svg" alt="codepen">https://codepen.io/armpetri</h5>
-          <h5 class="profiles card_data"><img src="./icons/linkedin.svg" alt="linkedin">https://www.linkedin.com/in/armandspetrikas</h5>
-        </div>
-      </div>
+    </div>
   </section>
+
   <!-- Work  -->
   <section id="work" class="work container">
     <h2>Some Things I’ve Built</h2>
+
     <!-- 1st Work  -->
     <div class="work_row">
       <div class="image_wrapper">
@@ -63,7 +67,7 @@
         </div>
         <div class="work_link_wrapper">
           <a href="https://github.com/ArmPetri/Coin-Case" target="_blank" class="work_link"><h4>See Code</h4><img src="./icons/here.svg" alt="here"></a>
-          <a href="" target="_blank" class="work_link"><h4>Live Site</h4><img src="./icons/here.svg" alt="here"></a>
+          <!-- <a href="" target="_blank" class="work_link"><h4>Live Site</h4><img src="./icons/here.svg" alt="here"></a> -->
         </div>
       </div>
       <div class="work_technologies">
@@ -73,6 +77,7 @@
         <p>Styled Components</p>
       </div>
     </div>
+
     <!-- 2nd Work  -->
     <div class="work_row">
       <div class="image_wrapper">
@@ -98,6 +103,7 @@
         <p>Web Audio API</p>
       </div>
     </div>
+
     <!-- 3rd Work  -->
     <div class="work_row">
       <div class="image_wrapper">
@@ -122,6 +128,7 @@
       </div>
     </div>
   </section>
+
   <!-- Skillset  -->
   <section id="skillset" class="skillset container">
     <h2>Skill Set</h2>
@@ -152,30 +159,38 @@
       little bit of creativity can bring things to life and give user an experience.
       My free time activities include creating soundscapes with electronic synthesizers and sound engineering as well as traveling and working out.</p>
   </section>
+
   <!-- Contact  -->
   <section id="contact" class="contact container">
     <h2>Contact Me</h2>
     <div class="contact_wrapper">
       <div class="left_contact">
-        <form action="" class="contact_form" autocomplete="off">
+     
+        <form id="contactform" action="https://formsubmit.io/send/700f0f67-23d6-468d-9a69-3dfc641680f5" method="POST" class="contactform" autocomplete="off">
+          <input type="hidden" name="_subject" value="New inquiry on armandspetrikas.com!">
           <label for="name">Name *</label>
-          <input type="text" id="name" autocomplete="off">
+          <input name="name" type="text" id="name" autocomplete="off" required>
           <label for="email">Email *</label>
-          <input type="email" id="email">
-          <label for="message">Message *</label>
-          <textarea id="message" class="textarea"></textarea>
-          <button type="submit"><h4>Send Message</h4></button>
+          <input name="email" type="email" id="email" required>
+          <label for="comment">Message *</label>
+          <textarea name="comment" id="comment" class="textarea" required></textarea>
+          <input name="_formsubmit_id" type="text" style="display:none">
+          <button id="submit" type="submit"><h4>Send Message</h4></button>
         </form>
+        <div id="successMessage" class="none">
+          <h3>Thank you for getting in touch!</h4>
+          <h4>I will get back to you as soon as possible.</h4>
+        </div>
       </div>
       <div class="right_contact">
         <h5 class="profiles"><img src="./icons/email.svg" alt="email">armandspetrikas@gmail.com</h5>
         <h5 class="profiles"><img src="./icons/github.svg" alt="github">https://github.com/ArmPetri</h5>
         <h5 class="profiles"><img src="./icons/codepen.svg" alt="codepen">https://codepen.io/armpetri</h5>
         <h5 class="profiles"><img src="./icons/linkedin.svg" alt="linkedin">https://www.linkedin.com/in/armandspetrikas</h5>
-        <h5 class="profiles"><img src="./icons/facebook.svg" alt="facebook">https://www.facebook.com/armands.petrikas</h5>
       </div>
     </div>
   </section>
+
   <!-- Footer  -->
   <footer>
     <p>Designed & Built by Armands Petrikas</p>

@@ -1,3 +1,4 @@
+// Scroll Up 
 document.addEventListener("scroll", scrolling);
 
 let scrollUpButton = document.querySelector("#scrollUpButton");
@@ -21,3 +22,29 @@ function scrollToTop() {
     behavior: "smooth"
   })
 }
+
+// Mobile menu 
+let mobileMenuButton = document.querySelector('#mobile_menu_button')
+mobileMenuButton.addEventListener('click', () => {
+  
+  let navlinks = document.querySelector("#links");
+    if(navlinks.className === "links") {
+      navlinks.classList.add("active")
+    } else {
+      navlinks.classList.remove("active")
+    }
+})
+
+// Form Submit message 
+const form = document.querySelector('#contactform')
+const successMessage = document.querySelector('#successMessage')
+
+form.onsubmit = submit;
+
+function submit(event) {
+  event.preventDefault();
+
+  form.classList.add('none');
+  successMessage.classList.add('visible');
+}
+
