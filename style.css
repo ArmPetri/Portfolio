@@ -204,7 +204,8 @@ header li {
   flex-direction: column;
   justify-content: center;
   padding-left: 2.5rem;
-  animation: movein 0.8s ease-in;
+  overflow: hidden;
+  animation: movein 2s ease-out;
 }
 
 @keyframes movein {
@@ -213,6 +214,116 @@ header li {
   }
   to {
     transform: perspective(0px) rotateY(0deg);
+  }
+}
+
+.card:before,
+.card:after {
+  content: '';
+  position: absolute;
+  top: -120px;
+  left: -100px;
+  width: 10%;
+  height: 150%;
+  background: rgba(255,255,255, 0.3);
+  transform: skewX(-40deg);
+  animation-name: ripple;
+  animation-duration: 4.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  background: linear-gradient(
+      to right, 
+      rgba(255, 255, 255, 0.13) 0%,
+      rgba(255, 255, 255, 0.13) 77%,
+      rgba(196, 196, 196, 0.5) 92%,
+      rgba(255, 255, 255, 0.0) 100%
+    );
+    opacity: 0.25;
+} 
+
+@keyframes ripple {
+  0% {
+    left: -200%;
+    top: -100%;
+    opacity: .25;
+  }
+  50% {
+    left: 120px;
+    top: 0px;
+    opacity: 0;
+    z-index: 5;
+  }
+  100% {
+    left: 200%;
+    top: 0;
+    opacity: .1;
+  }
+}
+
+.line{
+  position: absolute;
+  bottom: 80px;
+  left: 50px;
+  transform: rotate(45deg);
+  width: 5px;
+  height: 200px;
+  background:rgba(255, 255, 255, 0.6);
+  z-index: 5;
+  filter: blur(20px);
+  animation-name: pulsating;
+  animation-duration: 2.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.line:nth-of-type(2) {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+  transform: rotate(45deg);
+  width: 5px;
+  height: 300px;
+  background:rgba(255, 255, 255, 0.6);
+  animation-delay: 2.5s;
+}
+
+.line:nth-of-type(3) {
+  position: absolute;
+  bottom: 100px;
+  left: 400px;
+  transform: rotate(45deg);
+  width: 5px;
+  height: 300px;
+  background:rgba(255, 255, 255, 0.6);
+  animation-delay: 3s;
+}
+
+.line:nth-of-type(4) {
+  position: absolute;
+  top: 100px;
+  left: 350px;
+  transform: rotate(45deg);
+  width: 5px;
+  height: 200px;
+  background:rgba(255, 255, 255, 0.6);
+  animation-delay: 4s;
+}
+
+@keyframes pulsating {
+  0% {
+ 
+    filter: blur(20px);
+  }
+  50% {
+    filter: blur(10px);
+    z-index: 5;
+  }
+  100% {
+    filter: blur(15px);
   }
 }
 
