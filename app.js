@@ -1,3 +1,13 @@
+// Burger menu 
+const links = document.querySelectorAll('#links > li');
+// console.log(links);
+
+for(let link of links) {
+  link.addEventListener("click", () => {
+    location.href = (link.firstChild.getAttribute("href"));
+  })
+}
+
 // Scroll Up 
 document.addEventListener("scroll", scrolling);
 

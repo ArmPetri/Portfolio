@@ -35,8 +35,8 @@ ul {
 }
 
 img {
-  height: auto;
   max-width: 100%; 
+  height: auto;
 }
 
 body {
@@ -217,7 +217,9 @@ header li {
   height: 15.5rem;
   background: linear-gradient(110.41deg, rgba(70, 158, 99, 0.32) 5.73%, rgba(85, 145, 71, 0.1) 44.33%);
   box-shadow: 0px 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(1.875rem);
+  backdrop-filter: blur(30px);
+  /* backdrop-filter: blur(1.875rem); */
+  -webkit-backdrop-filter: blur(30px);
   border-radius: 0.938rem;
   display: flex;
   flex-direction: column;
@@ -225,6 +227,11 @@ header li {
   padding-left: 2.5rem;
   overflow: hidden;
   animation: movein 2s ease-out;
+}
+
+.card::before {
+  content: '';
+    filter: blur(30px);
 }
 
 @keyframes movein {
@@ -252,6 +259,7 @@ header li {
   animation-delay: 2s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+  /* filter: blur(30px); */
   background: linear-gradient(
       to right, 
       rgba(255, 255, 255, 0.13) 0%,
@@ -705,11 +713,11 @@ footer p {
 }
 
 /* Media Queries  */
-@media (min-width:75.25rem) {
+@media (min-width: 1204px) {
 
 }
 
-@media(max-width: 75.25rem) {
+@media(max-width: 1204px) {
   :root {
     font-size: 80%;
   }
@@ -723,6 +731,10 @@ footer p {
     height: 60%;
   }
 
+  .card {
+    padding: 2rem;
+  }
+
   .skillset {
     height: 100vh;
   }
@@ -733,9 +745,12 @@ footer p {
   .work_row:nth-of-type(2) .work_wrapper {
     left: 25rem;
   }
+.work_info {
+  margin-left: 1rem;
+  }
 }
 
-@media(max-width: 60.625rem) {
+@media(max-width: 970px) {
   :root {
     font-size: 60%;
   }
@@ -757,9 +772,17 @@ footer p {
   }
 }
 
-@media(max-width: 46.25rem) {
+@media(max-width: 740px) {
   :root {
     font-size: 40%;
+  }
+
+  .left_hero h3 {
+    padding-right: 5rem;
+  }
+
+  .left_hero h3 br {
+    display: none;
   }
 
   .container {
@@ -772,7 +795,7 @@ footer p {
   }
 }
 
-@media(max-width: 30.063rem) {
+@media(max-width: 481px) {
   :root {
     font-size: 50%;
   }
@@ -915,27 +938,18 @@ footer p {
     right: auto;
     top: auto;
     bottom: auto;
-    width: 100%;
-    height: 57.14%;
+    width: 272px; 
+    height: 155.43px;
     justify-content: space-around;
     padding: 2rem;
-  }
-
-  .card h4 {
-    padding-left: 2rem;
-  }
-
-  .card_line {
-    margin-left: 2rem;
-    width: 85%;
-  }
-
-  .card h5:first-of-type {
-    padding-left: 2rem;
-  }
+  } 
 
   .card h5 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+  }
+
+  .card_subtitle {
+    padding-top: 1.2 rem;
   }
 
   /* Work  */
@@ -1209,7 +1223,7 @@ footer p {
   height: 100%;
 }
 
-@media(max-width: 21.875rem) {
+@media(max-width: 350px) {
   .card h5,
   .right_contact h5 {
     font-size: 1.3rem;
