@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Portfolio</title>
+  <title>Armands Petrikas</title>
 </head>
 <body>
   <!-- Header  -->
@@ -155,6 +155,7 @@
       </div>
     </div>
   </section>
+  
   <!-- About  -->
   <section id="about" class="about container">
     <h2>About Me</h2>
@@ -169,25 +170,18 @@
     <h2>Contact Me</h2>
     <div class="contact_wrapper">
       <div class="left_contact">
-     
-        <form id="contactform" action="https://formsubmit.co/armandspetrikas@gmail.com" method="POST" class="contactform" autocomplete="off">
-          <input type="hidden" name="_subject" value="New inquiry on armandspetrikas.com!">
-          <input name="_next" type="hidden" value="https://armandspetrikas.com"">
+        <form id="contactform" action="https://formspree.io/f/xyyoywgl" method="POST" class="contactform" autocomplete="off">
           <label for="name">Name *</label>
           <input name="name" type="text" id="name" autocomplete="off" required>
           <label for="email">Email *</label>
-          <input name="email" type="email" id="email" required>
+          <input name="_replyto" type="email" id="email" required>
           <label for="comment">Message *</label>
-          <textarea name="comment" id="comment" class="textarea" required></textarea>
-          <input name="_formsubmit_id" type="text" style="display:none">
-          <button id="submit" type="submit">
+          <textarea name="message" id="comment" class="textarea" required></textarea>
+          <button id="submit" type="submit" name="Send">
             <h4>Send Message</h4>
           </button>
         </form>
-        <div id="successMessage" class="none">
-          <h3>Thank you for getting in touch!</h4>
-          <h4>I will get back to you as soon as possible.</h4>
-        </div>
+
       </div>
       <div class="right_contact">
         <h5 class="profiles"><img src="./icons/email.svg" alt="email">armandspetrikas@gmail.com</h5>

@@ -45,16 +45,4 @@ mobileMenuButton.addEventListener('click', () => {
     }
 })
 
-// Form Submit message 
-const form = document.querySelector('#contactform')
-const successMessage = document.querySelector('#successMessage')
-
-form.onsubmit = submit;
-
-function submit(event) {
-  event.preventDefault();
-
-  form.classList.add('none');
-  successMessage.classList.add('visible');
-}
 
