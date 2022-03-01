@@ -11,7 +11,6 @@
   --m: 1.125rem;
   --s: 1rem;
   --xs: 0.875rem;
-
 }
 
 *,
@@ -236,7 +235,7 @@ header li {
 
 @keyframes movein {
   from {
-    transform: perspective(700px) rotateY(-20deg);
+    transform: perspective(700px) rotateY(-.25deg);
   }
   to {
     transform: perspective(0px) rotateY(0deg);
@@ -453,7 +452,7 @@ header li {
 }
 
 .img_overlay:hover {
-  transition: .5s ease;
+  transition: .5s ease-in-out;
   opacity: 0;
 }
 
