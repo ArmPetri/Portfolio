@@ -262,7 +262,7 @@ header li {
   width: 10%;
   height: 150%;
   background: rgba(255,255,255, 0.3);
-  transform: skewX(-40deg);
+  /* transform: skewX(-40deg); */
   animation-name: ripple;
   animation-duration: 4.5s;
   animation-timing-function: ease-out;
