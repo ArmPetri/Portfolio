@@ -3,8 +3,6 @@
 A personal portfolio website
 
 ### Site:
-
 https://armandspetrikas.com/
 
-
-Just Testing
+features and options
