@@ -6,4 +6,4 @@ A personal portfolio website
 
 https://armandspetrikas.com/
 
-testing features
+testing features and options
